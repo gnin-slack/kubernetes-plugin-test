@@ -1,0 +1,15 @@
+pipeline {
+  agent {
+    kubernetes {
+      yamlFile 'kubepod.yaml'
+    }
+  }
+
+  stages {
+    stage ('init') {
+      steps ('something') {
+        sh "mkdir /tmp/director"
+      }
+    }
+  }
+}

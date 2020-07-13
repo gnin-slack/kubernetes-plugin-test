@@ -1,0 +1,8 @@
+spec:
+  containers:
+  - name: hhvm-builder
+    image: hhvm/hhvm:4.65.0
+    command:
+    - cat
+    tty: true
+  restartPolicy: Never
